@@ -1,0 +1,16 @@
+{
+  "1": {
+    "knowledge_id": "1",
+    "date": "Jan 23 2020",
+    "title": "first knowledge",
+    "description": "This is the first description",
+    "example": "just empty"
+  },
+  "2": {
+    "knowledge_id": "2",
+    "date": "Jan 23 2020",
+    "title": "second knowledge",
+    "description": "This is the second description",
+    "example": "just empty"
+  }
+}

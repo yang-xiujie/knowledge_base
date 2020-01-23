@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:knowledge_base/views/home.dart';
 import 'package:knowledge_base/bloc/search_bloc.dart';
 import 'package:knowledge_base/bloc/search_bloc_provider.dart';
+import 'package:knowledge_base/bloc/home_bloc.dart';
+import 'package:knowledge_base/bloc/home_bloc_provider.dart';
+import 'package:knowledge_base/services/fetch_api.dart';
+import 'package:knowledge_base/services/fetch_api_impl.dart';
 void main() => runApp(
     SearchBlocProvider(
       child: MyApp(),
@@ -28,7 +32,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
+      home: HomeBlocProvider(
+        homeBloc: HomeBloc(Fetch_Api_Impl()),
+        child: Home(),
+      ),
     );
   }
 }
